@@ -1,5 +1,6 @@
 sap.ui.define(
-	["routeOne/controller/BaseController",
+	[
+		"routeOne/controller/BaseController",
 	],
 	function (BaseController) {
 	"use strict";

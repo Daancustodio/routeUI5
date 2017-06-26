@@ -1,11 +1,10 @@
 sap.ui.define(
-[
-    "sap/ui/core/mvc/Controller",
-    "sap/ui/core/routing/History"
+[    
+    "routeOne/controller/BaseController",   
 ], 
-function(Controller, History){
+function(BaseController){
     "use strict";
-    return Controller.extend("routeOne.controller.Rotas", {
+    return BaseController.extend("routeOne.controller.Rotas", {
         onInit : function () {            
             console.log("Você está no controller de rotas");
         },
