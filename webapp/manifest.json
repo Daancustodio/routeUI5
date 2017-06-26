@@ -1,0 +1,93 @@
+{
+	"_version": "1.0.1",
+	"sap.app": {
+		"_version": "1.0.0",
+		"id": "routeOne",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"applicationVersion": {
+			"version": "1.0.0"
+		}
+	},
+	"sap.ui": {
+		"_version": "1.3.0",
+		"technology": "UI5",
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_bluecrystal"
+		]
+	},
+	"sap.ui5": {
+	    "_version": "1.2.0",
+		"rootView": "routeOne.view.App",
+		"dependencies": {
+			"minUI5Version": "1.34",
+			"libs": {
+				"sap.ui.core": {
+					"minVersion": "1.34.0"
+				},
+				"sap.m": {
+					"minVersion": "1.34.0"
+				},
+				"sap.ui.layout": {
+					"minVersion": "1.34.0"
+				}
+			}
+        },
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+		    "i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "routeOne.i18n.i18n"
+				}
+			}
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "routeOne.view",
+				"controlId": "app",
+				"controlAggregation": "pages",
+				"bypassed": {
+					"target": "notFound"
+				}
+			},
+
+			"routes": [
+				{
+					"pattern": "",
+					"name": "master",
+					"target": "master"
+				},
+				{
+					"pattern": "rotas",
+					"name": "rotas",
+					"target": "rotas"
+				}			
+			],
+
+			"targets": {
+				"master": {
+					"viewName": "Master",
+					"viewLevel": 1
+				},
+				"rotas":{
+					"viewName": "Rotas",
+					"viewLevel": 2
+				}
+				
+			}
+		}
+	}
+}

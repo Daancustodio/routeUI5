@@ -1,0 +1,21 @@
+<mvc:View
+    controllerName="routeOne.controller.Master"
+	xmlns:mvc="sap.ui.core.mvc"	
+	xmlns="sap.m">
+	<Page
+		id="page"		
+		title="{i18n>MasterView.tittle}">	
+
+		 <Panel backgroundDesign="Transparent">			
+			<GenericTile  class="sapUiSmallMargin" header="{i18n>Commom.Menu.routes}" press="onRoutes">
+				<tileContent>
+					<TileContent>
+						<content>
+							<NumericContent id="suplierTile"  nullifyValue="false" value="" color="#8875E7" icon="sap-icon://supplier"/>
+						</content>
+					</TileContent>
+				</tileContent>
+			</GenericTile>		
+		</Panel>		
+	</Page>
+</mvc:View>
