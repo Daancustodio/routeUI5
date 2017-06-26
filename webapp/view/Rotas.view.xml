@@ -5,7 +5,7 @@
 
 <Page
 		id="page"
-		navButtonPress="onNavPress" 
+		navButtonPress="onNavBack" 
     	showNavButton="true" 	
 		title="{i18n>Routes.PageTitle}">
 <content>
