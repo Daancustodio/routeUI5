@@ -6,8 +6,7 @@ sap.ui.define(
 function(Controller, History){
     "use strict";
     return Controller.extend("routeOne.controller.Rotas", {
-        onInit : function () {
-            this._oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+        onInit : function () {            
             console.log("Você está no controller de rotas");
         },
                 });
